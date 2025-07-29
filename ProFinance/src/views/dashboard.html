@@ -3,11 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../js/guardian.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>hello wolrd
-        
-    </h1>
+    <header>
+        <h1>ProFinance Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="">Balance</a></li>
+                <li><a href="">Categories</a></li>
+                <li><a href="">Reports</a></li>
+                 <button type="submit" id="btn-logout">Log Out</button>
+            </ul>
+        </nav>
+    </header>
+       <main>
+        <section class="filters">
+              <select id="filter-type">
+                    <option value>Type</option>
+                    <option value="expense">Expense</option>
+                    <option value="profit">Profit</option>
+                </select>
+                <select id="sort-movements">
+                    <option value="">Sort by</option>
+                    <option value="date-desc">Most Recent</option>
+                    <option value="date-asc">Least Recent</option>
+                    <option value="amount-desc">Highest Amount</option>
+                    <option value="amount-asc">Lowest Amount</option>
+                    <option value="description-asc">A-Z</option>
+                    <option value="description-desc">Z-A</option>
+                </select>
+
+                <button id="btn-clean-filter">Clean</button>
+        </section>
+          
+       </main>
+
+      <script type="module" src="../js/dashboard.js"></script>
 </body>
 </html>
