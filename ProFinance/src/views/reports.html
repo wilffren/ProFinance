@@ -1,106 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../js/guardian.js"></script>
-    <title>Rports</title>
-</head>
-<body>
-     <header>
-        <h1>ProFinance Dashboard</h1>
-        <nav>
-            <ul>
-                <li><a href="./dashboard.html">Balance</a></li>
-                <li><a href="./categories.html">Categories</a></li>
-                <li><a href="">Reports</a></li>
-                 <button type="submit" id="btn-logout">Log Out</button>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="reports-container">
-          
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="../js/guardian.js"></script>
+        <title>Rports</title>
+    </head>
+    <body>
+        <header>
+            <h1>ProFinance Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="./dashboard.html">Balance</a></li>
+                    <li><a href="./categories.html">Categories</a></li>
+                    <li><a href>Reports</a></li>
+                    <button type="submit" id="btn-logout">Log Out</button>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="reports-container">
+                <section class="balance">
+                    <div class="reports-grid">
+                        <!-- First Row -->
+                        <!-- Sales and Purchases Summary -->
+                        <div class="report-card sales">
+                            <div class="report-icon">💰</div>
+                            <div class="report-content">
+                                <h3>Total Sales</h3>
+                                <p class="report-value"
+                                    id="total-sales">0.00</p>
+                            </div>
+                        </div>
 
-            
+                        <div class="report-card purchases">
+                            <div class="report-icon">🛒</div>
+                            <div class="report-content">
+                                <h3>Total Purchases</h3>
+                                <p class="report-value"
+                                    id="total-purchases">0.00</p>
+                            </div>
+                        </div>
 
-                <!-- Second Row -->
-                 <!-- Category Sales and Purchases -->
-                <div class="report-card category-sales">
-                    <div class="report-icon">🏆</div>
-                    <div class="report-content">
-                        <h3>Top Sales Category</h3>
-                        <p class="report-value" id="top-category-sales">N/A</p>
-                        <small class="report-subtitle" id="top-category-sales-amount">0.00</small>
+                        <div class="report-card balance">
+                            <div class="report-icon">📊</div>
+                            <div class="report-content">
+                                <h3>Balance</h3>
+                                <p class="report-value" id="balance">0.00</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Second Row -->
+                    <!-- Category Sales and Purchases -->
+                    <div class="report-card category-sales">
+                        <div class="report-icon">🏆</div>
+                        <div class="report-content">
+                            <h3>Top Sales Category</h3>
+                            <p class="report-value"
+                                id="top-category-sales">N/A</p>
+                            <small class="report-subtitle"
+                                id="top-category-sales-amount">0.00</small>
+                        </div>
+                    </div>
+
+                    <div class="report-card category-purchases">
+                        <div class="report-icon">📦</div>
+                        <div class="report-content">
+                            <h3>Top Purchase Category</h3>
+                            <p class="report-value"
+                                id="top-category-purchases">N/A</p>
+                            <small class="report-subtitle"
+                                id="top-category-purchases-amount">0.00</small>
+                        </div>
+                    </div>
+
+                    <div class="report-card product-sold">
+                        <div class="report-icon">⭐</div>
+                        <div class="report-content">
+                            <h3>Top Selling Product</h3>
+                            <p class="report-value"
+                                id="top-product-sold">N/A</p>
+                            <small class="report-subtitle"
+                                id="top-product-sold-amount">0 sales</small>
+                        </div>
+                    </div>
+
+                    <!-- Third Row -->
+                    <!-- Product Purchased and Monthly Reports -->
+                    <div class="report-card product-purchased">
+                        <div class="report-icon">📋</div>
+                        <div class="report-content">
+                            <h3>Top Purchased Product</h3>
+                            <p class="report-value"
+                                id="top-product-purchased">N/A</p>
+                            <small class="report-subtitle"
+                                id="top-product-purchased-amount">0
+                                purchases</small>
+                        </div>
+                    </div>
+
+                    <div class="report-card month-sales">
+                        <div class="report-icon">📅</div>
+                        <div class="report-content">
+                            <h3>Top Sales Month</h3>
+                            <p class="report-value" id="top-month-sales">N/A</p>
+                            <small class="report-subtitle"
+                                id="top-month-sales-amount">0.00</small>
+                        </div>
+                    </div>
+
+                    <div class="report-card month-purchases">
+                        <div class="report-icon">🗓️</div>
+                        <div class="report-content">
+                            <h3>Top Purchases Month</h3>
+                            <p class="report-value"
+                                id="top-month-purchases">N/A</p>
+                            <small class="report-subtitle"
+                                id="top-month-purchases-amount">0.00</small>
+                        </div>
                     </div>
                 </div>
 
-                <div class="report-card category-purchases">
-                    <div class="report-icon">📦</div>
-                    <div class="report-content">
-                        <h3>Top Purchase Category</h3>
-                        <p class="report-value" id="top-category-purchases">N/A</p>
-                        <small class="report-subtitle" id="top-category-purchases-amount">0.00</small>
-                    </div>
-                </div>
+                <!-- Detailed Tables (optional, hidden by default) -->
+                <!-- Toggle button for detailed reports -->
+                <div class="detailed-reports" style="display: none;">
+                    <section class="table-section">
+                        <h2>Totals by Category</h2>
+                        <div id="category-totals" class="table-container">
+                            <!-- Dynamic table from JS -->
+                        </div>
+                    </section>
 
-                <div class="report-card product-sold">
-                    <div class="report-icon">⭐</div>
-                    <div class="report-content">
-                        <h3>Top Selling Product</h3>
-                        <p class="report-value" id="top-product-sold">N/A</p>
-                        <small class="report-subtitle" id="top-product-sold-amount">0 sales</small>
-                    </div>
-                </div>
-
-                <!-- Third Row -->
-                 <!-- Product Purchased and Monthly Reports -->
-                <div class="report-card product-purchased">
-                    <div class="report-icon">📋</div>
-                    <div class="report-content">
-                        <h3>Top Purchased Product</h3>
-                        <p class="report-value" id="top-product-purchased">N/A</p>
-                        <small class="report-subtitle" id="top-product-purchased-amount">0 purchases</small>
-                    </div>
-                </div>
-
-                <div class="report-card month-sales">
-                    <div class="report-icon">📅</div>
-                    <div class="report-content">
-                        <h3>Top Sales Month</h3>
-                        <p class="report-value" id="top-month-sales">N/A</p>
-                        <small class="report-subtitle" id="top-month-sales-amount">0.00</small>
-                    </div>
-                </div>
-
-                <div class="report-card month-purchases">
-                    <div class="report-icon">🗓️</div>
-                    <div class="report-content">
-                        <h3>Top Purchases Month</h3>
-                        <p class="report-value" id="top-month-purchases">N/A</p>
-                        <small class="report-subtitle" id="top-month-purchases-amount">0.00</small>
-                    </div>
+                    <section class="table-section">
+                        <h2>Totals by Month</h2>
+                        <div id="month-totals" class="table-container">
+                            <!-- Dynamic table from JS -->
+                        </div>
+                    </section>
                 </div>
             </div>
-
-            <!-- Detailed Tables (optional, hidden by default) -->
-             <!-- Toggle button for detailed reports -->
-            <div class="detailed-reports" style="display: none;">
-                <section class="table-section">
-                    <h2>Totals by Category</h2>
-                    <div id="category-totals" class="table-container">
-                        <!-- Dynamic table from JS -->
-                    </div>
-                </section>
-
-                <section class="table-section">
-                    <h2>Totals by Month</h2>
-                    <div id="month-totals" class="table-container">
-                        <!-- Dynamic table from JS -->
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
-</body>
+        </main>
+        <script type="module" src="../js/dashboard.js"></script>
+        <script type="module" src="../js/reports.js"></script>
+    </body>
 </html>

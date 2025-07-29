@@ -8,9 +8,30 @@
   ],
   "categories": [
     {
-      "id": "e9c5",
-      "name": "Services"
+      "name": "Services",
+      "id": "a1de"
+    },
+    {
+      "id": "8593",
+      "name": "Transport"
     }
   ],
-  "movements": []
+  "movements": [
+    {
+      "id": "61eb",
+      "type": "expense",
+      "description": "trial",
+      "amount": "1000",
+      "date": "2025-07-29",
+      "categoryId": "a1de"
+    },
+    {
+      "id": "f376",
+      "type": "profit",
+      "description": "travel",
+      "amount": "20000",
+      "date": "2025-07-28",
+      "categoryId": "8593"
+    }
+  ]
 }
