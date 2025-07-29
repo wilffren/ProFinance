@@ -51,9 +51,9 @@ function calculateCategoryTotals(movements, categories) {
         const categoryId = movement.categoryId;
         
         if (totals[categoryId]) {
-            if (movement.type === 'sale') {
+            if (movement.type === 'profit') {
                 totals[categoryId].sales += amount;
-            } else if (movement.type === 'buy') {
+            } else if (movement.type === 'expense') {
                 totals[categoryId].purchases += amount;
             }
         }
@@ -77,9 +77,9 @@ function calculateMonthTotals(movements) {
             };
         }
         
-        if (movement.type === 'sale') {
+        if (movement.type === 'profit') {
             totals[month].sales += amount;
-        } else if (movement.type === 'buy') {
+        } else if (movement.type === 'expense') {
             totals[month].purchases += amount;
         }
     });
@@ -92,7 +92,7 @@ function getTopSellingProduct(movements) {
     const productCounts = {};
     
     movements
-        .filter(movement => movement.type === 'sale')
+        .filter(movement => movement.type === 'profit')
         .forEach(movement => {
             const description = movement.description;
             productCounts[description] = (productCounts[description] || 0) + 1;
@@ -113,7 +113,7 @@ function getTopPurchasedProduct(movements) {
     const productCounts = {};
     
     movements
-        .filter(movement => movement.type === 'buy')
+        .filter(movement => movement.type === 'expense')
         .forEach(movement => {
             const description = movement.description;
             productCounts[description] = (productCounts[description] || 0) + 1;
@@ -136,14 +136,16 @@ function updateReportCards(movements, categories) {
     
     movements.forEach(movement => {
         const amount = parseFloat(movement.amount);
-        if (movement.type === 'sale') {
+        if (movement.type === 'profit') {
             totalSales += amount;
-        } else if (movement.type === 'buy') {
+        } else if (movement.type === 'expense') {
             totalPurchases += amount;
         }
     });
     
     const balance = totalSales - totalPurchases;
+    console.log(balance);
+    
     
     // Update basic values
     document.getElementById('total-sales').textContent = formatCurrency(totalSales);
@@ -219,8 +221,8 @@ function createCategoryTable(categoryTotals) {
             <thead>
                 <tr>
                     <th>Category</th>
-                    <th>Sales</th>
-                    <th>Purchases</th>
+                    <th>Profits</th>
+                    <th>Expenses</th>
                     <th>Balance</th>
                 </tr>
             </thead>
@@ -256,8 +258,8 @@ function createMonthTable(monthTotals) {
             <thead>
                 <tr>
                     <th>Month</th>
-                    <th>Sales</th>
-                    <th>Purchases</th>
+                    <th>Profits</th>
+                    <th>Expenses</th>
                     <th>Balance</th>
                 </tr>
             </thead>
