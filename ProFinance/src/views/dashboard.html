@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="module" src="../js/guardian.js"></script>
+        <link rel="stylesheet" href="../css/dashboard.css">
         <title>new Operation</title>
     </head>
     <body>
+        <!--Header for a Navbar options-->
         <header>
             <h1>ProFinance Dashboard</h1>
             <nav>
@@ -18,7 +20,9 @@
                 </ul>
             </nav>
         </header>
+        <!--Main section for new operation-->
         <main>
+            <!--Form for new operation-->
             <section>
                 <form id="form-movements">
 
@@ -47,8 +51,9 @@
                     <input type="date" id="date" name="date" required />
 
                     <button type="submit" class="btn-save">Save
-                        Movement</button>
+                        Operation</button>
                 </form>
+                <!--section to show operations-->
             </section>
             <section class="table-of-content">
                 <h2>Movements</h2>
@@ -73,12 +78,11 @@
              <div class="reports-container">
                 <section class="balance">
                     <div class="reports-grid">
-                        <!-- First Row -->
-                        <!-- Sales and Purchases Summary -->
+                        
                         <div class="report-card sales">
                             <div class="report-icon">💰</div>
                             <div class="report-content">
-                                <h3>Total Sales</h3>
+                                <h3>Total Profits</h3>
                                 <p class="report-value"
                                     id="total-sales">0.00</p>
                             </div>
@@ -87,7 +91,7 @@
                         <div class="report-card purchases">
                             <div class="report-icon">🛒</div>
                             <div class="report-content">
-                                <h3>Total Purchases</h3>
+                                <h3>Total Expenses</h3>
                                 <p class="report-value"
                                     id="total-purchases">0.00</p>
                             </div>
@@ -105,6 +109,7 @@
                     </section>
                 </div>
             </div>
+            <!--Section to filters-->
             <section class="filters">
                 <h3>Filters</h3>
                 <select id="filter-type">
