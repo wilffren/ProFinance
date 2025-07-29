@@ -1,9 +1,9 @@
 import { loadCategories } from "../js/categories";
 
 // categories endpoint 
-const endPoint = "http://localhost:3000/categories";
+const endPoint = "http://localhost:3001/categories";
 // movements endpoint for cascade operations
-const movementsEndpoint = "http://localhost:3000/movements";
+const movementsEndpoint = "http://localhost:3001/movements";
 
 // saved categories function
 export async function saveCategorie(newCategory) {

@@ -1,11 +1,11 @@
 {
-    "user": [
+  "user": [
     {
       "id": "j01f",
       "username": "admin",
       "password": "admin123"
     }
   ],
-
-  "categories": []
+  "categories": [],
+  "movements": []
 }
