@@ -6,6 +6,11 @@
       "password": "admin123"
     }
   ],
-  "categories": [],
+  "categories": [
+    {
+      "id": "e9c5",
+      "name": "Services"
+    }
+  ],
   "movements": []
 }

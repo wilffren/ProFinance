@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="../js/guardian.js"></script>
-    <title>Document</title>
+    <title>new Operation</title>
 </head>
 <body>
     <header>
@@ -13,12 +13,40 @@
             <ul>
                 <li><a href="">Balance</a></li>
                 <li><a href="./categories.html">Categories</a></li>
-                <li><a href="">Reports</a></li>
+                <li><a href="./reports.html">Reports</a></li>
                  <button type="submit" id="btn-logout">Log Out</button>
             </ul>
         </nav>
     </header>
        <main>
+        <section class="balance">
+            <div class="reports-grid">
+                <!-- First Row -->
+                 <!-- Sales and Purchases Summary -->
+                <div class="report-card sales">
+                    <div class="report-icon">💰</div>
+                    <div class="report-content">
+                        <h3>Total Sales</h3>
+                        <p class="report-value" id="total-sales">0.00</p>
+                    </div>
+                </div>
+
+                <div class="report-card purchases">
+                    <div class="report-icon">🛒</div>
+                    <div class="report-content">
+                        <h3>Total Purchases</h3>
+                        <p class="report-value" id="total-purchases">0.00</p>
+                    </div>
+                </div>
+
+                <div class="report-card balance">
+                    <div class="report-icon">📊</div>
+                    <div class="report-content">
+                        <h3>Balance</h3>
+                        <p class="report-value" id="balance">0.00</p>
+                    </div>
+                </div>
+        </section>
         <section class="filters">
               <select id="filter-type">
                     <option value>Type</option>
