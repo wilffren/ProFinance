@@ -8,7 +8,7 @@ $btnLogOut.addEventListener('click', () => {
 })
 
 import { createNewMovement, deleteMovement, getMovement, getMovements, updateMovement } from "../services/dashboardService";
-import {fetchData} from "../js/reports"
+
 
 // Endpoint for categories
 const endPointCategories = "http://localhost:3001/categories"
@@ -264,4 +264,5 @@ async function editMovement(id) {
     editingMovementId = id;
     document.querySelector('button[type="submit"]').textContent = "Update Movement";
 }
+
 

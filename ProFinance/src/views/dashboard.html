@@ -69,31 +69,67 @@
                 </table>
 
             </section>
-            
-                <section class="filters">
-                    <h3>Filters</h3>
-                    <select id="filter-type">
-                        <option value>Type</option>
-                        <option value="expense">Expense</option>
-                        <option value="profit">Profit</option>
-                    </select>
-                    <select id="filter-category">
-                        <option value>Category</option>
-                    </select>
-                    <select id="sort-movements">
-                        <option value>Sort by</option>
-                        <option value="date-desc">Most Recent</option>
-                        <option value="date-asc">Least Recent</option>
-                        <option value="amount-desc">Highest Amount</option>
-                        <option value="amount-asc">Lowest Amount</option>
-                        <option value="description-asc">A-Z</option>
-                        <option value="description-desc">Z-A</option>
-                    </select>
 
-                    <button id="btn-clean-filter">Clean</button>
-                </section>
+             <div class="reports-container">
+                <section class="balance">
+                    <div class="reports-grid">
+                        <!-- First Row -->
+                        <!-- Sales and Purchases Summary -->
+                        <div class="report-card sales">
+                            <div class="report-icon">💰</div>
+                            <div class="report-content">
+                                <h3>Total Sales</h3>
+                                <p class="report-value"
+                                    id="total-sales">0.00</p>
+                            </div>
+                        </div>
 
-            </main>
-            <script type="module" src="../js/dashboard.js"></script>
-        </body>
-    </html>
+                        <div class="report-card purchases">
+                            <div class="report-icon">🛒</div>
+                            <div class="report-content">
+                                <h3>Total Purchases</h3>
+                                <p class="report-value"
+                                    id="total-purchases">0.00</p>
+                            </div>
+                        </div>
+
+                        <div class="report-card balance">
+                            <div class="report-icon">📊</div>
+                            <div class="report-content">
+                                <h3>Balance</h3>
+                                <p class="report-value" id="balance">0.00</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    </section>
+                </div>
+            </div>
+            <section class="filters">
+                <h3>Filters</h3>
+                <select id="filter-type">
+                    <option value>Type</option>
+                    <option value="expense">Expense</option>
+                    <option value="profit">Profit</option>
+                </select>
+                <select id="filter-category">
+                    <option value>Category</option>
+                </select>
+                <select id="sort-movements">
+                    <option value>Sort by</option>
+                    <option value="date-desc">Most Recent</option>
+                    <option value="date-asc">Least Recent</option>
+                    <option value="amount-desc">Highest Amount</option>
+                    <option value="amount-asc">Lowest Amount</option>
+                    <option value="description-asc">A-Z</option>
+                    <option value="description-desc">Z-A</option>
+                </select>
+
+                <button id="btn-clean-filter">Clean</button>
+            </section>
+
+        </main>
+     <script type="module" src="../js/reports.js"></script>
+        <script type="module" src="../js/dashboard.js"></script>
+    </body>
+</html>
