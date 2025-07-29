@@ -1,37 +1,30 @@
-<!--View main of project-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProFinance</title>
-</head>
-<body>
-    <header>
-      <h1>saved money</h1>
-      <!-- <nav>
-        <a href="">Balance</a>
-        <a href="">Categories</a>
-        <a href="">Reports</a>
-      </nav> -->
-    </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>financial management - store</title>
+  </head>
+  <body>
+    <!--Principal section of index html-->
     <main>
-      <section>
-        <form id="formLogin">
-          <h2>Login</h2>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
+       <!--form for login user administrator, with inputs and buttons-->
+      <section id="loginScreen" class="login-container">
+        <form class="login-form" id="loginForm">
           
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-          
-          <button type="submit">Login</button>
+          <article class="form-group">
+            <label for="username">User:</label>
+            <input type="text" id="username" required>
+          </article>
+          <article class="from-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+          </article>
+          <button type="submit">Log In</button>
         </form>
       </section>
     </main>
-    <footer>
-
-    </footer>
-
-</body>
+    <script type="module" src="./src/js/login.js"></script>
+  </body>
 </html>

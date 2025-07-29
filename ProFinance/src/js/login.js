@@ -1,36 +1,43 @@
+//Validate the login form
+// get the login form element
 
-//obtain the form element
 
-const $formLogin = document.querySelector('#formLogin');
+const loginForm = document.getElementById('loginForm');
 
-//and add an event listener to it
-//to prevent the default action of reloading the page
-//and to call the login function with the input values
+// add an event listener to the form to handle the submit event
+// prevent the default form submission
 
-$formLogin.addEventListener("submit", (event) => {
-    event.preventDefault();         //don't reload page
-    const inputUserName = $formLogin.username.value
-    const inputPassword = $formLogin.password.value
-    
+loginForm.addEventListener('submit', (event) => {
 
-    login(inputUserName, inputPassword)
+    const inputUsername = loginForm.username.value
+    const inputPassword = loginForm.password.value;
+
+    login(inputUsername, inputPassword)
+
+    event.preventDefault(); // Prevent the default form submission
+
 })
 
-async function login(inputUserName, inputPassword) {
-    let response = await fetch(`http://localhost:3000/users/${inputUserName}`)
-    let data = await response.json()
+// fetch the user data from the server using the input username
+// check if the user exists
+async function login(inputUsername, inputPassword) {
+    let response = await fetch(`http://localhost:3001/user?username=${inputUsername}`,)
+    let data = await response.json();
+    // if user not found, alert the user
+    // if user found, check the password
+    // if password matches, store the user data in localStorage and redirect to dashboard
+    // if password does not match, alert the user
+    if (data.length === 0) {
+        alert("user not found")
+    } else {
+        const userFound = data[0]
 
-    if (data.lenght === 0) {
-        alert("User not found")
-    }else{
-        data.userfound
-
-        if (data.password === inputPassword) {
-            alert("Login successful")
-            // Redirect to the main page or perform other actions
-            window.location.href = "index.html";
+        if (userFound.password === inputPassword) {
+            localStorage.setItem('currentUser', JSON.stringify(userFound));
+            window.location.href = './src/views/dashboard.html';
         } else {
-            alert("Incorrect password")
+            alert("password or username incorrect");
         }
     }
+
 }
