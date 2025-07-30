@@ -12,6 +12,7 @@ body {
     flex-direction: column;
 }
 
+/*Header styles*/
 header {
     background: rgba(88, 252, 101, 0.95);
     backdrop-filter: blur(10px);
@@ -39,7 +40,7 @@ header h1 {
     font-size: 2rem;
     font-weight: 700;
 }
-
+/*Navbar styles*/
 nav ul {
     display: flex;
     flex-direction: row;
@@ -93,7 +94,7 @@ nav #btn-logout:hover {
 a {
     text-decoration: none;
 }
-
+/*Main styles*/
 main {
     flex: 1;
     max-width: 1400px;
