@@ -64,7 +64,8 @@ this is an MPA built with html, css and javascript, for managing personal financ
    ```bash
    json-server --watch database/dbManager.json --port 3001
    ```
-4. Open `index.html` in your browser or serve with a local server
+4. Open `index.html` in your browser or serve with a local npm server
+   with the command: `npm run dev`
 
 ## **API Endpoints**
 
