@@ -17,7 +17,7 @@ this is an MPA built with html, css and javascript, for managing personal financ
 ## **Table of Contents**
 
 * **database/** - JSON database files and configuration
-  * `dbManager.json` - Main database file
+  * `dbFinance.json` - Main database file
   * `README.md` - Database documentation
 * **src/** - Source code directory
   * **css/** - Stylesheets
