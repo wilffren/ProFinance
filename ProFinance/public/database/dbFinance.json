@@ -1,0 +1,49 @@
+{
+  "user": [
+    {
+      "id": "j01f",
+      "username": "admin",
+      "password": "admin123"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Services",
+      "id": "a1de"
+    },
+    {
+      "id": "8416",
+      "name": "Transport"
+    },
+    {
+      "id": "c1c4",
+      "name": "Work"
+    }
+  ],
+  "movements": [
+    {
+      "id": "61eb",
+      "type": "expense",
+      "description": "trial",
+      "amount": "1000",
+      "date": "2025-07-29",
+      "categoryId": "a1de"
+    },
+    {
+      "id": "55bd",
+      "type": "profit",
+      "description": "travel",
+      "amount": "25000",
+      "date": "2025-07-09",
+      "categoryId": "8416"
+    },
+    {
+      "id": "759c",
+      "type": "expense",
+      "description": "Laptop",
+      "amount": "15000",
+      "date": "2025-07-26",
+      "categoryId": "c1c4"
+    }
+  ]
+}

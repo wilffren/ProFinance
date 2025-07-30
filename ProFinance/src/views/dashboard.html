@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="../js/guardian.js"></script>
+        <link rel="stylesheet" href="../css/dashboard.css">
+        <title>new Operation</title>
+    </head>
+    <body>
+        <!--Header for a Navbar options-->
+        <header>
+            <h1>ProFinance Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href>Balance</a></li>
+                    <li><a href="./categories.html">Categories</a></li>
+                    <li><a href="./reports.html">Reports</a></li>
+                    <button type="submit" id="btn-logout">Log Out</button>
+                </ul>
+            </nav>
+        </header>
+        <!--Main section for new operation-->
+        <main>
+            <!--Form for new operation-->
+            <section>
+                <form id="form-movements">
+
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description"
+                        required />
+
+                    <label for="amount">Amount ($)</label>
+                    <input type="number" id="amount" name="amount" min="1"
+                        required />
+
+                    <label for="type">Types</label>
+                    <select name="type" id="type">
+                        <option value>Select Option</option>
+                        <option value="expense">Expense</option>
+                        <option value="profit">Profit</option>
+                    </select>
+
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value>-- Select category --</option>
+
+                    </select>
+
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required />
+
+                    <button type="submit" class="btn-save">Save
+                        Operation</button>
+                </form>
+                <!--section to show operations-->
+            </section>
+            <section class="table-of-content">
+                <h2>Movements</h2>
+                <table id="movements-table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movements-body">
+
+                    </tbody>
+                </table>
+
+            </section>
+
+             <div class="reports-container">
+                <section class="balance">
+                    <div class="reports-grid">
+                        
+                        <div class="report-card sales">
+                            <div class="report-icon">💰</div>
+                            <div class="report-content">
+                                <h3>Total Profits</h3>
+                                <p class="report-value"
+                                    id="total-sales">0.00</p>
+                            </div>
+                        </div>
+
+                        <div class="report-card purchases">
+                            <div class="report-icon">🛒</div>
+                            <div class="report-content">
+                                <h3>Total Expenses</h3>
+                                <p class="report-value"
+                                    id="total-purchases">0.00</p>
+                            </div>
+                        </div>
+
+                        <div class="report-card balance">
+                            <div class="report-icon">📊</div>
+                            <div class="report-content">
+                                <h3>Balance</h3>
+                                <p class="report-value" id="balance">0.00</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    </section>
+                </div>
+            </div>
+            <!--Section to filters-->
+            <section class="filters">
+                <h3>Filters</h3>
+                <select id="filter-type">
+                    <option value>Type</option>
+                    <option value="expense">Expense</option>
+                    <option value="profit">Profit</option>
+                </select>
+                <select id="filter-category">
+                    <option value>Category</option>
+                </select>
+                <select id="sort-movements">
+                    <option value>Sort by</option>
+                    <option value="date-desc">Most Recent</option>
+                    <option value="date-asc">Least Recent</option>
+                    <option value="amount-desc">Highest Amount</option>
+                    <option value="amount-asc">Lowest Amount</option>
+                    <option value="description-asc">A-Z</option>
+                    <option value="description-desc">Z-A</option>
+                </select>
+
+                <button id="btn-clean-filter">Clean</button>
+            </section>
+
+        </main>
+     <script type="module" src="../js/reportsBalance.js"></script>
+        <script type="module" src="../js/dashboard.js"></script>
+    </body>
+</html>

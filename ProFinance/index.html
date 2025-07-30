@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/login.css">
+   
+    <title>financial management - store</title>
+  </head>
+  <body>
+    <!--Principal section of index html-->
+    <main>
+       <!--form for login user administrator, with inputs and buttons-->
+      <section id="loginScreen" class="login-container">
+        <form class="login-form" id="loginForm">
+          <!--title of the form-->
+          
+          <!--inputs for username and password-->
+          <article class="form-group">
+            <label for="username">User:</label>
+            <input type="text" id="username" required>
+          </article>
+          <article class="from-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+          </article>
+          <!--button to submit the form-->
+          <button type="submit">Log In</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="./src/js/login.js"></script>
+  </body>
+</html>
