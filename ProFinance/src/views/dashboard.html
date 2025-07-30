@@ -25,7 +25,7 @@
             <!--Form for new operation-->
             <section>
                 <form id="form-movements">
-
+                    <!--Description, amount, types, category, date-->
                     <label for="description">Description</label>
                     <input type="text" id="description" name="description"
                         required />
@@ -74,7 +74,7 @@
                 </table>
 
             </section>
-
+                <!--Section balance -->
              <div class="reports-container">
                 <section class="balance">
                     <div class="reports-grid">
@@ -112,14 +112,17 @@
             <!--Section to filters-->
             <section class="filters">
                 <h3>Filters</h3>
+                <!--Type-->
                 <select id="filter-type">
                     <option value>Type</option>
                     <option value="expense">Expense</option>
                     <option value="profit">Profit</option>
                 </select>
+                <!--Category-->
                 <select id="filter-category">
                     <option value>Category</option>
                 </select>
+                <!--Sort By-->
                 <select id="sort-movements">
                     <option value>Sort by</option>
                     <option value="date-desc">Most Recent</option>
